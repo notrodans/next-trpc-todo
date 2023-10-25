@@ -5,6 +5,14 @@
 await import("./src/env.mjs");
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+	swcMinify: true,
+	experimental: {
+		serverActions: true
+	},
+	eslint: {
+		ignoreDuringBuilds: true
+	}
+};
 
 export default config;
